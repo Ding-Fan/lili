@@ -1,8 +1,24 @@
 <head>
-  <title>黎黎最棒！</title>
+  <title>黎黎最棒 💕</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-image: url('https://images.unsplash.com/photo-1578364249730-0c4ee16426fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+    /*   background-size: 100%; */
+      background-position: center;
+    }
     .main {
-      font-size: 80px;
+      font-size: 50px;
+      text-align: center;
+    }
+    .main > div {
+      transition: 1s;
+    }
+    .main > div:hover {
+      text-shadow: 0 0 10px, 0 0 40px, 0 0 80px;
     }
   </style>
 </head>
@@ -16,7 +32,7 @@
     for (let i = 1; i < 521; i++) {
       let Message = document.createElement("div");
       Message.style.color = getRandomColor();
-      Message.appendChild(document.createTextNode(`${i} 我爱黎黎`));
+      Message.appendChild(document.createTextNode(`${i} 我爱黎黎 💕`));
       MainDiv.appendChild(Message);
     }
 
