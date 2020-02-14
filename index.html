@@ -2,6 +2,11 @@
   <title>黎黎最棒！</title>
 </head>
 <body>
+  <style>
+    .main {
+      font-size: 30px;
+    }
+  </style>
   
   <div class="main"></div>
 
@@ -10,8 +15,18 @@
 
     for (let i = 1; i < 521; i++) {
       let Message = document.createElement("div");
+      Message.style.color = getRandomColor();
       Message.appendChild(document.createTextNode(`${i} 我爱黎黎`));
       MainDiv.appendChild(Message);
+    }
+
+    function getRandomColor() {
+      let letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
     }
   </script>
 </body>
